@@ -35,7 +35,7 @@ class GooglePlaces extends Base {
     const output = 'json'
     const query = '?' + new URLSearchParams({ ...args, key }).toString()
     const url = this.authority + path + output + query
-    return axios(url)
+    return axios.get(url)
   }
 }
 
