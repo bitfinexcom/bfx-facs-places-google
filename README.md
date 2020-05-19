@@ -17,6 +17,7 @@ _Remember to add restrictions to the credential as to block connections from oth
   "p0": {
     "google" : {
       "key": "xxxXXxxxXXXXxxxXXXXXxx_XXxxxXXXXxxxXXXXX"
+    }
   }
 }
 ```
