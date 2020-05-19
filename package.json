@@ -1,0 +1,41 @@
+{
+  "name": "bfx-facs-places-google",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Bitfinex Google Places Facility",
+  "author": {
+    "name": "Ezequiel Wernicke",
+    "email": "ezequiel.wernicke@bitfinex.com"
+  },
+  "keywords": [
+    "bitfinex",
+    "places"
+  ],
+  "dependencies": {
+    "bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git",
+    "axios": "^0.19.2"
+  },
+  "engine": {
+    "node": ">=8.0"
+  },
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitfinexcom/bfx-facs-places-google.git"
+  },
+  "homepage": "https://github.com/bitfinexcom/bfx-facs-places-google",
+  "maintainers": [
+    {
+      "name": "Ezequiel Wernicke",
+      "email": "<ezequiel.wernicke@bitfinex.com>"
+    },
+    {
+      "name": "prdn",
+      "email": "paolo@bitfinex.com"
+    }
+  ],
+  "scripts": {
+    "lint": "standard"
+  }
+}
