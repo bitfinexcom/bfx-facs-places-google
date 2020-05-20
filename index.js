@@ -2,6 +2,7 @@
 
 const Base = require('bfx-facs-base')
 const axios = require('axios')
+const _ = require('lodash')
 
 class GooglePlaces extends Base {
   constructor (caller, opts, ctx) {
@@ -17,17 +18,28 @@ class GooglePlaces extends Base {
   }
 
   queryAutoComplete (args) {
-    const input = args && args.input
-    if (!input) throw new Error('Input is required')
+    if (!(args && args.input)) throw new Error('Input is required')
     const path = 'queryautocomplete/'
-    return this._req(path, { input })
+    const keys = [
+      'input', 'sessiontoken', 'offset', 'origin', 'location', 'radius',
+      'language', 'types', 'components', 'strictbounds'
+    ]
+    return this._req(
+      path,
+      _.pick(args, keys)
+    )
   }
 
   details (args) {
-    const placeId = args && args.place_id
-    if (!placeId) throw new Error('place_id is required')
+    if (!(args && args.place_id)) throw new Error('place_id is required')
     const path = 'details/'
-    return this._req(path, { place_id: placeId })
+    const keys = [
+      'place_id', 'language', 'region', 'sessiontoken', 'fields'
+    ]
+    return this._req(
+      path,
+      _.pick(args, keys)
+    )
   }
 
   _req (path, args) {
