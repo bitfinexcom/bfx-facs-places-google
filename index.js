@@ -1,7 +1,7 @@
 'use strict'
 
 const Base = require('bfx-facs-base')
-const axios = require('axios')
+const axios = require('axios').default
 const _ = require('lodash')
 
 class GooglePlaces extends Base {
