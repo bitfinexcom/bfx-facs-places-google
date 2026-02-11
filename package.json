@@ -1,6 +1,6 @@
 {
-  "name": "bfx-facs-places-google",
-  "version": "1.0.1",
+  "name": "@bitfinex/bfx-facs-places-google",
+  "version": "2.0.0",
   "private": false,
   "description": "Bitfinex Google Places Facility",
   "author": {
@@ -12,12 +12,12 @@
     "places"
   ],
   "dependencies": {
-    "bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git",
-    "axios": "^1.8.1",
-    "lodash": "^4.17.21"
+    "@bitfinex/bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git",
+    "axios": "1.13.5",
+    "lodash": "4.17.23"
   },
-  "engine": {
-    "node": ">=8.0"
+  "engines": {
+    "node": ">=16.0"
   },
   "main": "index.js",
   "license": "Apache-2.0",
@@ -38,5 +38,8 @@
   ],
   "scripts": {
     "lint": "standard"
+  },
+  "devDependencies": {
+    "standard": "17.1.2"
   }
 }
