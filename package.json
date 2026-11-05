@@ -17,7 +17,7 @@
     "lodash": "4.17.23"
   },
   "engines": {
-    "node": ">=16.0"
+    "node": ">=22.0.0"
   },
   "main": "index.js",
   "license": "Apache-2.0",
