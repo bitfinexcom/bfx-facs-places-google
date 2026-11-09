@@ -1,7 +1,7 @@
 'use strict'
 
 const Base = require('@bitfinex/bfx-facs-base')
-const _ = require('lodash')
+const { pick } = require('@bitfinex/lib-js-util-base')
 const fetch = require('node-fetch')
 
 class GooglePlaces extends Base {
@@ -26,7 +26,7 @@ class GooglePlaces extends Base {
     ]
     return this._req(
       path,
-      _.pick(args, keys)
+      pick(args, keys)
     )
   }
 
@@ -38,7 +38,7 @@ class GooglePlaces extends Base {
     ]
     return this._req(
       path,
-      _.pick(args, keys)
+      pick(args, keys)
     )
   }
 
