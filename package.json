@@ -41,6 +41,6 @@
     "lint:fix": "bfx-lint-js . --fix"
   },
   "devDependencies": {
-    "@bitfinex/lint-js": "git+https://github.com/bitfinexcom/bfx-lint-js.git#v1.0.0"
+    "@bitfinex/lint-js": "^1.1.0"
   }
 }
