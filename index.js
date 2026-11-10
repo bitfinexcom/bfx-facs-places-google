@@ -1,8 +1,8 @@
 'use strict'
 
 const Base = require('@bitfinex/bfx-facs-base')
-const axios = require('axios').default
-const _ = require('lodash')
+const { pick } = require('@bitfinex/lib-js-util-base')
+const fetch = require('node-fetch')
 
 class GooglePlaces extends Base {
   constructor (caller, opts, ctx) {
@@ -26,7 +26,7 @@ class GooglePlaces extends Base {
     ]
     return this._req(
       path,
-      _.pick(args, keys)
+      pick(args, keys)
     )
   }
 
@@ -38,16 +38,16 @@ class GooglePlaces extends Base {
     ]
     return this._req(
       path,
-      _.pick(args, keys)
+      pick(args, keys)
     )
   }
 
-  _req (path, args) {
+  async _req (path, args) {
     const key = this.conf.google.key
     const output = 'json'
     const query = new URLSearchParams({ ...args, key }).toString()
     const url = this.authority + path + '/' + output + '?' + query
-    return axios.get(url)
+    return (await fetch(url)).json()
   }
 }
 
